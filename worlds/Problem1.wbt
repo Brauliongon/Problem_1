@@ -1,0 +1,223 @@
+#VRML_SIM R2019a utf8
+WorldInfo {
+}
+Viewpoint {
+  orientation 0.027509852080629157 0.9991717364470234 0.029984147877534787 4.625545100690643
+  position -1.2534659994066597 0.24376134645937841 0.24924089661237173
+}
+Floor {
+}
+Robot {
+  translation 0 0.05 0
+  children [
+    DEF robot Group {
+      children [
+        DEF bot Shape {
+          appearance Appearance {
+            material Material {
+              diffuseColor 1 0 0
+            }
+          }
+          geometry Cylinder {
+            height 0.1
+            radius 0.2
+          }
+        }
+        HingeJoint {
+          jointParameters HingeJointParameters {
+            axis 0 1 0
+            anchor 0 0.05 0
+            springConstant 10
+            staticFriction 3
+          }
+          endPoint Solid {
+            translation 0 0.05 0
+            children [
+              DEF Link_1 Group {
+                children [
+                  Transform {
+                    translation 0 0.05 0.5
+                    children [
+                      Shape {
+                        appearance Appearance {
+                          material Material {
+                            diffuseColor 0 0 1
+                          }
+                        }
+                        geometry Cylinder {
+                          height 0.1
+                          radius 0.1
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0.05 0.25
+                    children [
+                      Shape {
+                        appearance Appearance {
+                          material Material {
+                            diffuseColor 0 0 1
+                          }
+                        }
+                        geometry Box {
+                          size 0.05 0.1 0.5
+                        }
+                      }
+                    ]
+                  }
+                  Transform {
+                    translation 0 0.05 0
+                    children [
+                      Shape {
+                        appearance Appearance {
+                          material Material {
+                            diffuseColor 0 0 1
+                          }
+                        }
+                        geometry Cylinder {
+                          height 0.1
+                          radius 0.1
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+              Transform {
+                translation 0 0 0.5
+                children [
+                  HingeJoint {
+                    jointParameters HingeJointParameters {
+                      axis 0 1 0
+                      anchor 0 0.1 0
+                      springConstant 10
+                      staticFriction 3
+                    }
+                    endPoint Solid {
+                      translation 0 0.09999999999999999 0
+                      children [
+                        DEF Link_2 Group {
+                          children [
+                            Transform {
+                              translation 0 0.05 0.5
+                              children [
+                                Shape {
+                                  appearance Appearance {
+                                    material Material {
+                                      diffuseColor 0 0 1
+                                    }
+                                  }
+                                  geometry Cylinder {
+                                    height 0.1
+                                    radius 0.1
+                                  }
+                                }
+                              ]
+                            }
+                            Transform {
+                              translation 0 0.05 0.25
+                              children [
+                                Shape {
+                                  appearance Appearance {
+                                    material Material {
+                                      diffuseColor 0 0 1
+                                    }
+                                  }
+                                  geometry Box {
+                                    size 0.05 0.1 0.5
+                                  }
+                                }
+                              ]
+                            }
+                            Transform {
+                              translation 0 0.05 0
+                              children [
+                                Shape {
+                                  appearance Appearance {
+                                    material Material {
+                                      diffuseColor 0 0 1
+                                    }
+                                  }
+                                  geometry Cylinder {
+                                    height 0.1
+                                    radius 0.1
+                                  }
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                      boundingObject USE Link_2
+                      physics Physics {
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+            boundingObject DEF Link_2 Group {
+              children [
+                Transform {
+                  translation 0 0.05 0.5
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                          diffuseColor 0 0 1
+                        }
+                      }
+                      geometry Cylinder {
+                        height 0.1
+                        radius 0.1
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0 0.05 0.25
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                          diffuseColor 0 0 1
+                        }
+                      }
+                      geometry Box {
+                        size 0.05 0.1 0.5
+                      }
+                    }
+                  ]
+                }
+                Transform {
+                  translation 0 0.05 0
+                  children [
+                    Shape {
+                      appearance Appearance {
+                        material Material {
+                          diffuseColor 0 0 1
+                        }
+                      }
+                      geometry Cylinder {
+                        height 0.1
+                        radius 0.1
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+            physics Physics {
+            }
+          }
+        }
+      ]
+    }
+  ]
+  boundingObject USE bot
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
